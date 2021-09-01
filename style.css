@@ -110,8 +110,8 @@ html {
 }
 
 .prefilled {
-    background-color: #e8e8e4 !important;
-    user-select: none;
+    background-color: #e8e8e4 ;
+    /* user-select: none; */
     color: rgb(14, 7, 119);
     font-size: 45px;
 }
@@ -120,11 +120,11 @@ p.selected {
     background-color: lightblue;
 }
 
-p.incorrect {
+p.wrong {
     color: red !important;
 }
 
 
 p.highlighted{
-    background-color: blue;
+    background-color: #dee2e6 !important;
 }
