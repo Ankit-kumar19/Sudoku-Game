@@ -12,7 +12,7 @@
     <h1 class="head">Sudoku Mania</h1>
     <div class="setup">
         <div class="diff">
-            <button class="btn" id="easy" onClick="level(1)">Easy</button>
+            <button class="btn" onClick="level(1)">Easy</button>
             <button class="btn" id="med" onClick="level(2)">Medium</button>
             <button class="btn" id="hard" onClick="level(3)">Hard</button>
         </div>
@@ -20,8 +20,20 @@
 
     
     <div class="game">
-        <div id="board"></div>       
+        <div id="board"></div>  
+        <div class="num">
+            <button id="btns"onclick="update(1)" >1</button><br>
+            <button id="btns"onclick="update(2)" >2</button><br>
+            <button id="btns"onclick="update(3)" >3</button><br>
+            <button id="btns"onclick="update(4)" >4</button><br>
+            <button id="btns"onclick="update(5)" >5</button><br>
+            <button id="btns"onclick="update(6)" >6</button><br>
+            <button id="btns"onclick="update(7)" >7</button><br>
+            <button id="btns"onclick="update(8)" >8</button><br>
+            <button id="btns"onclick="update(9)" >9</button>
+        </div>
     </div>
+
     <center><button class="val btn" onClick="validate()">Validate</button> </center>
     <script type="text/javascript" src="app.js"></script>
 

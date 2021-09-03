@@ -17,7 +17,8 @@
       var inputCell;
       var diff = easy[0];
       var solution = [""];
-
+      var disableSelect;
+      var selectedNum
       // declaring variable finshed
 
       // some useful functions
@@ -33,7 +34,30 @@
 
       window.onload = function () {
       startSudoku();
+      // 
+     
       };
+      // function keyp(){
+      //    for(let i=0;i<id("number-container").children.length;i+++){
+      //   id("number-container").children[i].addEventListener('click' , function(){
+            
+      //       if(!disableSelect){
+              
+      //         if(this.classList.contains("selected")){
+      //           this.classList.remove("selected");
+      //           selectedNum=null;
+
+      //         }
+      //         else{
+      //           for(let i=0;i<9;i++){
+      //             id("number-container")[i].classList.remove("selected");
+      //           }
+      //           this.class
+      //         }
+      //       }
+      //   });
+      // }
+      
 
       // difficulty anaalysis
       function level(x) {
@@ -49,8 +73,10 @@
 
       // updating
 
-      function update() {
-      if (inputCell) {
+      function update(n) {
+       inputCell.textContent=n;
+       addToArray(n);      
+        if (inputCell) {
       document.addEventListener(
         "keydown",
         (event) => {
@@ -91,6 +117,7 @@
       }
       function addToArray(num) {
       let index = q(".selected").id;
+      // id(index).classList.add("highlighted");
       solution.splice(index, 1, num);
       checks();
       }
@@ -143,6 +170,9 @@
       function checks() {
       let col = parseInt(inputCell.id % 9);
       let row = parseInt(inputCell.id / 9);
+      // let col = 3*Math.floor(row/3)+Math.floor
+      // let row = parseInt(inputCell.id % 9);
+
       let s = inputCell.id;
       //console.log(col,row);
       for (let i = 0; i < 81; i++) {
